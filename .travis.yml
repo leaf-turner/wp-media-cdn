@@ -1,5 +1,6 @@
 # see http://about.travis-ci.org/docs/user/languages/php/ for more hints
 language: php
+group: deprecated-2017Q3
 
 # list any PHP version you want to test against
 php:
