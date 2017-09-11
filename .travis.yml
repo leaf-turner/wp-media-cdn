@@ -3,9 +3,5 @@ group: deprecated-2017Q3
 php:
 - 5.5
 - 5.4
-<<<<<<< HEAD
-=======
-- hhvm
->>>>>>> origin/master
 
 script: phpunit --configuration phpunit.xml
