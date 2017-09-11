@@ -1,3 +1,6 @@
+
+https://travis-ci.com/ryandhubbard/wp-media-cdn.svg?token=xsxeiAfCLU3rqfiokd8U&branch=master
+
 === wp-media-cdn ===
 Contributors: imforza
 Donate link:
