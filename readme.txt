@@ -1,5 +1,5 @@
-
-https://travis-ci.com/ryandhubbard/wp-media-cdn.svg?token=xsxeiAfCLU3rqfiokd8U&branch=master
+### Status
+[![Build Status](https://travis-ci.org/ryandhubbard/IDX_Broker_iOS.svg?branch=master)](https://travis-ci.org/ryandhubbard/IDX_Broker_iOS.svg?branch=master)
 
 === wp-media-cdn ===
 Contributors: imforza
