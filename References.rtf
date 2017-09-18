@@ -1,0 +1,160 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf830
+{\fonttbl\f0\fnil\fcharset0 HelveticaNeue-Bold;\f1\fnil\fcharset0 HelveticaNeue;\f2\fnil\fcharset0 Consolas;
+\f3\fswiss\fcharset0 ArialMT;}
+{\colortbl;\red255\green255\blue255;\red27\green31\blue34;\red255\green255\blue255;\red16\green60\blue192;
+\red21\green23\blue26;\red10\green77\blue204;\red26\green26\blue26;}
+{\*\expandedcolortbl;;\cssrgb\c14118\c16078\c18039;\cssrgb\c100000\c100000\c100000;\cssrgb\c6667\c33333\c80000;
+\cssrgb\c10588\c12157\c13725\c4706;\cssrgb\c1176\c40000\c83922;\cssrgb\c13333\c13333\c13333;}
+{\*\listtable{\list\listtemplateid1\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid1\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid1}
+{\list\listtemplateid2\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid101\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid2}
+{\list\listtemplateid3\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid201\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid3}
+{\list\listtemplateid4\listhybrid{\listlevel\levelnfc23\levelnfcn23\leveljc0\leveljcn0\levelfollow0\levelstartat1\levelspace360\levelindent0{\*\levelmarker \{disc\}}{\leveltext\leveltemplateid301\'01\uc0\u8226 ;}{\levelnumbers;}\fi-360\li720\lin720 }{\listname ;}\listid4}}
+{\*\listoverridetable{\listoverride\listid1\listoverridecount0\ls1}{\listoverride\listid2\listoverridecount0\ls2}{\listoverride\listid3\listoverridecount0\ls3}{\listoverride\listid4\listoverridecount0\ls4}}
+\margl1440\margr1440\vieww25140\viewh13840\viewkind0
+\deftab720
+\pard\pardeftab720\sl600\sa320\partightenfactor0
+
+\f0\b\fs48 \cf2 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \uc0\u8232 \cb3 wpmediacdn\
+\pard\pardeftab720\sl360\sa320\partightenfactor0
+
+\f1\b0\fs32 \cf2 A WordPress plugin to optimize WordPress media library via a CDN.\
+Images are one of the biggest culprits for a page loading slow. There are many plugins and services out there to improve that.\
+When you upload a image to WordPress, it will auto-generate different sizes of the images. The number of images and the sizes will vary based on the theme and plugins being used, it can be as small as 1 size, or as many as 30 or more.\
+At imFORZA we use Imagify to optimize images for performance, but there are many other tools. We would like to ulitmately run our own version of Imagify using Google Cloud Functions.\
+We also want to start offloading the media library to Google Cloud Storage, and loading all the files using the Google Cloud CDN. This needs to be setup where the cdn url can be configured, but should default to\'a0{\field{\*\fldinst{HYPERLINK "http://cdn.domain.com/"}}{\fldrslt 
+\f2\fs27\fsmilli13600 \cf4 \cb5 \ul \ulc4 \strokec4 cdn.domain.com}}. There is a plugin called WP Stateless, which can give a good example of this setup.\
+Currently Imagify and WP Stateless dont work well together, nor would they efficently if they did. Hence we want to role our own.\
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\b\fs36 \cf6 \cb1 \ul \ulc6 \strokec6 \
+\pard\pardeftab720\sl440\sa320\partightenfactor0
+\cf2 \cb3 \ulnone \strokec2 Image Optimization Services\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\partightenfactor0
+\ls1\ilvl0
+\f1\b0\fs32 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Imagify\'a0{\field{\*\fldinst{HYPERLINK "https://github.com/wp-api-libraries/wp-imagify-api"}}{\fldrslt \cf6 \ul \ulc6 \strokec6 WP-API-Library}}\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Shortpixel\'a0{\field{\*\fldinst{HYPERLINK "https://github.com/wp-api-libraries/wp-shortpixel-api"}}{\fldrslt \cf6 \ul \ulc6 \strokec6 WP-API-Library}}\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Imgix\'a0{\field{\*\fldinst{HYPERLINK "https://github.com/wp-api-libraries/wp-imgix-api"}}{\fldrslt \cf6 \ul \ulc6 \strokec6 WP-API-Library}}\cb1 \
+\ls1\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Kraken\'a0{\field{\*\fldinst{HYPERLINK "https://github.com/wp-api-libraries/wp-kraken-api"}}{\fldrslt \cf6 \ul \ulc6 \strokec6 WP-API-Library}}\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\b\fs36 \cf6 \ul \ulc6 \strokec6 \
+\pard\pardeftab720\sl440\sa320\partightenfactor0
+\cf2 \cb3 \ulnone \strokec2 CDNs\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\partightenfactor0
+\ls2\ilvl0
+\f1\b0\fs32 \cf2 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Google Cloud\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Amazon\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 Jetpack Photon\'a0{\field{\*\fldinst{HYPERLINK "https://github.com/wp-api-libraries/wp-photon-api"}}{\fldrslt \cf6 \ul \ulc6 \strokec6 WP-API-Library}}\cb1 \
+\ls2\ilvl0\cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}\expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 CloudFlare\cb1 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\b\fs36 \cf6 \ul \ulc6 \strokec6 \
+\pard\pardeftab720\sl440\sa320\partightenfactor0
+\cf2 \cb3 \ulnone \strokec2 Backups\
+\pard\pardeftab720\sl360\sa320\partightenfactor0
+
+\f1\b0\fs32 \cf2 Our image libraries need to be backed up daily, with backups later (maybe 30 days) moved to B2 to lower price for longer term storage. This can all be build as a Cloud Function.\
+\pard\pardeftab720\sl360\sa320\partightenfactor0
+\cf2 \cb1 \uc0\u8232 \cb3 \
+Logging\
+All logs should be stored on Google's Logging services.\
+\cb1 \uc0\u8232 \cb3 \
+\pard\pardeftab720\sl480\partightenfactor0
+
+\f0\b\fs48 \cf6 \cb1 \ul \ulc6 \strokec6 \
+\pard\pardeftab720\sl600\sa320\partightenfactor0
+\cf2 \cb3 \ulnone \strokec2 Further Reading\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\partightenfactor0
+\ls3\ilvl0
+\f1\b0\fs32 \cf6 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://hmn.md/2017/04/27/scaling-wordpress-images-tachyon/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://hmn.md/2017/04/27/scaling-wordpress-images-tachyon/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://wpengine.com/blog/unlimited-storage-with-wp-engines-proprietary-largefs/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://wpengine.com/blog/unlimited-storage-with-wp-engines-proprietary-largefs/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://hmn.md/2016/01/18/lightweight-image-previews-in-wordpress-with-gaussholder/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://hmn.md/2016/01/18/lightweight-image-previews-in-wordpress-with-gaussholder/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://deliciousbrains.com/strategies-handling-large-wordpress-media-libraries-dev-staging-environments/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://deliciousbrains.com/strategies-handling-large-wordpress-media-libraries-dev-staging-environments/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://deliciousbrains.com/introducing-wp-image-processing-queue/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://deliciousbrains.com/introducing-wp-image-processing-queue/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://engineering.flosports.tv/upload-cloud-storage-image-to-cloudinary-with-cloud-functions-aac506101ba0"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://engineering.flosports.tv/upload-cloud-storage-image-to-cloudinary-with-cloud-functions-aac506101ba0}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://medium.com/google-cloud/uploading-resizing-and-serving-images-with-google-cloud-platform-ca9631a2c556"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://medium.com/google-cloud/uploading-resizing-and-serving-images-with-google-cloud-platform-ca9631a2c556}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://medium.com/@philipp.schaechtele/asset-caching-with-service-worker-c40dcda43842"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://medium.com/@philipp.schaechtele/asset-caching-with-service-worker-c40dcda43842}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://gist.github.com/PhilJ/cd82a7616061da7b5e0c4e0444343ca6"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://gist.github.com/PhilJ/cd82a7616061da7b5e0c4e0444343ca6}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://hmn.md/2017/05/29/cavalcade-scaling-wordpress-jobs/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://hmn.md/2017/05/29/cavalcade-scaling-wordpress-jobs/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://medium.com/google-cloud/uploading-resizing-and-serving-images-with-google-cloud-platform-ca9631a2c556"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://medium.com/google-cloud/uploading-resizing-and-serving-images-with-google-cloud-platform-ca9631a2c556}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://www.zillow.com/engineering/image-processing-in-aws/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://www.zillow.com/engineering/image-processing-in-aws/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://www.zillow.com/wikipages/Photo-Uploading-Tips/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://www.zillow.com/wikipages/Photo-Uploading-Tips/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://aws.amazon.com/solutions/case-studies/zillow/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://aws.amazon.com/solutions/case-studies/zillow/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://closte.com/blog/google-cdn-the-fastest-content-delivery-network-for-wordpress"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://closte.com/blog/google-cdn-the-fastest-content-delivery-network-for-wordpress}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://wordpress.org/plugins/closte/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://wordpress.org/plugins/closte/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://wordpress.org/plugins/wp-stateless/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://wordpress.org/plugins/wp-stateless/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://wordpress.org/plugins/amazon-s3-and-cloudfront/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://wordpress.org/plugins/amazon-s3-and-cloudfront/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://cloud.google.com/vision/docs/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://cloud.google.com/vision/docs/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls3\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://wordpress.org/plugins/uber-media/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://wordpress.org/plugins/uber-media/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\sl360\partightenfactor0
+
+\f0\b\fs36 \cf6 \ul \ulc6 \strokec6 \
+\pard\pardeftab720\sl440\sa320\partightenfactor0
+\cf2 \cb3 \ulnone \strokec2 Auto Fix Plugins\
+\pard\tx220\tx720\pardeftab720\li720\fi-720\sl360\partightenfactor0
+\ls4\ilvl0
+\f1\b0\fs32 \cf6 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "http://irislines.com/blog-images-upside-down/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 http://irislines.com/blog-images-upside-down/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls4\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://wordpress.org/plugins/image-rotation-fixer/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://wordpress.org/plugins/image-rotation-fixer/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls4\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://wordpress.org/plugins/fix-image-rotation/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://wordpress.org/plugins/fix-image-rotation/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\ls4\ilvl0\cf6 \cb3 \kerning1\expnd0\expndtw0 \outl0\strokewidth0 {\listtext	\'95	}{\field{\*\fldinst{HYPERLINK "https://wordpress.org/plugins/image-rotation-repair/"}}{\fldrslt \expnd0\expndtw0\kerning0
+\ul \outl0\strokewidth0 \strokec6 https://wordpress.org/plugins/image-rotation-repair/}}\cf2 \cb1 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 \
+\pard\pardeftab720\sl300\partightenfactor0
+
+\f3\fs25\fsmilli12800 \cf7 \cb3 \strokec7 \
+}
