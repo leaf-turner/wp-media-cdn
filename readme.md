@@ -1,7 +1,7 @@
 ### Status
 [![Build Status](https://travis-ci.org/ryandhubbard/IDX_Broker_iOS.svg?branch=master)](https://travis-ci.org/ryandhubbard/IDX_Broker_iOS.svg?branch=master)   [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/akismet.svg)](//) [![WordPress plugin](https://img.shields.io/wordpress/v/akismet.svg)
 
-+[![Code Climate](chrome-extension://phgahogocbnfilkegjdpohgkkjgahjgk/badges/4.0.svg)](chrome-extension://phgahogocbnfilkegjdpohgkkjgahjgk/badges/4.0.svg)
+[![Code Climate](chrome-extension://phgahogocbnfilkegjdpohgkkjgahjgk/badges/4.0.svg)](chrome-extension://phgahogocbnfilkegjdpohgkkjgahjgk/badges/4.0.svg)
 
 
 === wp-media-cdn ===
