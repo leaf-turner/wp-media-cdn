@@ -1,5 +1,7 @@
 ### Status
-[![Build Status](https://travis-ci.org/ryandhubbard/IDX_Broker_iOS.svg?branch=master)](https://travis-ci.org/ryandhubbard/IDX_Broker_iOS.svg?branch=master)   [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/akismet.svg)](//) [![WordPress plugin](https://img.shields.io/wordpress/v/akismet.svg)
+[![Build Status](https://travis-ci.org/ryandhubbard/IDX_Broker_iOS.svg?branch=master)](https://travis-ci.org/ryandhubbard/IDX_Broker_iOS.svg?branch=master)   [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/akismet.svg)](//) [![WordPress plugin](https://img.shields.io/wordpress/v/akismet.svg)
+[![Code Climate](https://codeclimate.com/github/ryandhubbard/wp-media-cdn/membrane.png)](https://codeclimate.com/github/ryandhubbard/wp-media-cdn)
+
 
 === wp-media-cdn ===
 Contributors: imforza
