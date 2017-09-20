@@ -1,7 +1,7 @@
 ### Status
 [![Build Status](https://travis-ci.org/ryandhubbard/IDX_Broker_iOS.svg?branch=master)](https://travis-ci.org/ryandhubbard/IDX_Broker_iOS.svg?branch=master)   [![WordPress plugin](https://img.shields.io/wordpress/plugin/v/akismet.svg)](//) [![WordPress plugin](https://img.shields.io/wordpress/v/akismet.svg)
 
-[![Code Climate](https://codeclimate.com/repos/59ac760452b0152cf5000002/badges/gpa.svg)](https://codeclimate.com/repos/59ac760452b0152cf5000002)
+[![Code Climate](https://codeclimate.com/repos/59ac760452b0152cf5000002/gpa.svg)](https://codeclimate.com/repos/59ac760452b0152cf5000002)
 
 
 https://codeclimate.com/repos/59ac760452b0152cf5000002
