@@ -41,7 +41,7 @@ function writeToBucket(jsonObject){
 	 *	rename image file with image size, format: size X size imgName
 	 */
 	 
-	if(jsonObject.code != 200){
+	if(jsonObject.code !== 200){
 		 console.log('HTTP Response code ' + jsonObject.code);
 	} 
 	var imgUrl = jsonObject.image;
